@@ -1,7 +1,10 @@
 # Modelo entidad/relación. Viveros
 Alba Hidalgo Martín
+
 Juhi Kamal Chatani Mansukhani
+
 Administración y Diseño de Bases de Datos
+
 Universidad de La Laguna
 
 

@@ -14,10 +14,10 @@ Universidad de La Laguna
 Los productos que vende Tajinaste S.A.
 
 Atributos:
-`id_producto`: Identificador del producto (clave primaria).
-`nombre`
-`tipo`
-`precio`
+- `id_producto`: Identificador del producto (clave primaria).
+- `nombre`
+- `tipo`
+- `precio`
 
 Ejemplo: 01, Rosa, Flores, 1 euro
 

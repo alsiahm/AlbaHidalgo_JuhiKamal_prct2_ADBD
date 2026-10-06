@@ -26,10 +26,10 @@ Ejemplo: 01, Rosa, Flores, 1 euro
 Viveros perteneciente a Tajinaste S.A.
 
 Atributos:
-`id_vivero`: Identificador del vivero (clave primaria).
-`nombre` 
-`latitud`
-`longitud`
+- `id_vivero`: Identificador del vivero (clave primaria).
+- `nombre` 
+- `latitud`
+- `longitud`
 
 Ejemplo: 01, Vivero Palmar, 40.10, 4.1
 
@@ -38,10 +38,10 @@ Ejemplo: 01, Vivero Palmar, 40.10, 4.1
 Zonas en las que se divide un vivero. Dependiente al vivero (entidad débil)
 
 Atributos:
-`id_zona` Identificador de la zona dentro del vivero.
-`nombre` Nombre o tipo de zona.
-`latitud` 
-`longitud`
+- `id_zona` Identificador de la zona dentro del vivero.
+- `nombre` Nombre o tipo de zona.
+- `latitud` 
+- `longitud`
 
 Ejemplo: 04, Exposición, 29.19, -10.2
 
@@ -50,10 +50,10 @@ Ejemplo: 04, Exposición, 29.19, -10.2
 Empleados de Tajinaste S.A.
 
 Atributos
-`id_empleado` Identificador del empleado (clave primaria)
-`nombre` 
-`apellidos`
-`telefono` 
+- `id_empleado` Identificador del empleado (clave primaria)
+- `nombre` 
+- `apellidos`
+- `telefono` 
 
 Ejemplo: 03, Eva, Martínez Afonso, 29381920
 
@@ -62,9 +62,9 @@ Ejemplo: 03, Eva, Martínez Afonso, 29381920
 Clientes de Tajinaste S.A.
 
 Atributos
-`dni_cliente` Identificador del cliente (clave primaria).
-`nombre` 
-`email` 
+- `dni_cliente` Identificador del cliente (clave primaria).
+- `nombre` 
+- `email` 
 
 Ejemplo: 13832923N, Pablo, pablo@gmail.com
 
@@ -73,8 +73,8 @@ Ejemplo: 13832923N, Pablo, pablo@gmail.com
 Es una especialización de `Cliente` que representa a los clientes que pertenecen al programa de fidelización Tajinaste Plus. Posee los atributos heredados de Cliente
 
 Atributos
-`fecha_ingreso` Fecha en la que el cliente se incorporó a  Tajinaste Plus
-`bonificacion_acumulada` Bonificación acumulada por el cliente en función de sus compras
+- `fecha_ingreso` Fecha en la que el cliente se incorporó a  Tajinaste Plus
+- `bonificacion_acumulada` Bonificación acumulada por el cliente en función de sus compras
 
 Ejemplo: 13/08/2020, 25 euros
 
@@ -83,9 +83,9 @@ Ejemplo: 13/08/2020, 25 euros
 Pedido realizado por un cliente.
 
 Atributos:
-`num_pedido` Identificador del pedido (clave primaria).
-`fecha` Fecha en la que se realizó el pedido.
-`importe_total`
+- `num_pedido` Identificador del pedido (clave primaria).
+- `fecha` Fecha en la que se realizó el pedido.
+- `importe_total`
 
 Ejemplo: 193283B, 19/09/2026, 7 euros
 
@@ -106,7 +106,7 @@ Teniendo en cuenta la entidad débil zona de que no existe sin el vivero
 Los Productos con las Zonas donde se encuentran disponibles.
 
 Atributo:
-`stock` Cantidad disponible de un producto en una determinada zona.
+- `stock` Cantidad disponible de un producto en una determinada zona.
 Ejemplo: 50
 
 Un producto puede estar disponible en ninguna, una o varias zonas (0,N), y una zona puede contener ninguno, uno o varios productos (0,N).
@@ -116,10 +116,10 @@ Un producto puede estar disponible en ninguna, una o varias zonas (0,N), y una z
 Relaciona los Empleados con las Zonas en las que trabajan.
 
 Atributos:
-`fecha_inicio` Fecha en la que comienza la asignación del empleado a la zona.
-`fecha_fin` Fecha en la que finaliza la asignación. Puede ser nulo si continúa trabajando allí.
-`productividad` Productividad registrada para el empleado durante esa asignación. 
-`puesto`: Tarea que realizó durante la asignación
+- `fecha_inicio` Fecha en la que comienza la asignación del empleado a la zona.
+- `fecha_fin` Fecha en la que finaliza la asignación. Puede ser nulo si continúa trabajando allí.
+- `productividad` Productividad registrada para el empleado durante esa asignación. 
+- `puesto`: Tarea que realizó durante la asignación
 Ejemplo: 01/12/25, NULL, 80%, podaje
 
 Un empleado puede tener cero, una o varias asignaciones a lo largo del tiempo (0,N). Una zona puede tener cero, uno o varios empleados (0,N).
@@ -131,8 +131,8 @@ Se tiene en cuenta que la cardinalidad de (0,N) para los empleados en zonas es p
 Relaciona los Pedidos con los Productos que contienen.
 
 Atributos:
-`cantidad` Número de unidades del producto incluidas en el pedido.
-`precio_unitario` Precio del producto en el momento de realizar el pedido.
+- `cantidad` Número de unidades del producto incluidas en el pedido.
+- `precio_unitario` Precio del producto en el momento de realizar el pedido.
 Ejemplo: 2, 12 euros
 
 Un pedido incluye uno o varios productos (1,N), mientras que un producto puede aparecer en cero o muchos pedidos (0,N).
